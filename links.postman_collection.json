@@ -1,0 +1,339 @@
+{
+	"info": {
+		"_postman_id": "1bd86c1c-81de-456a-a063-13f4bec34d3e",
+		"name": "links",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "reg",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"login\": \"mure\",\r\n    \"password\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "auth",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"login\":\"mure\",\r\n    \"password\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/auth",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "linkRed",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY3MDY2NTc4MiwianRpIjoiZmFkZTFhYjUtNDgwZS00ZDJhLWE4ODItMzAwNDUwNmEyOGI1IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im11cmUiLCJuYmYiOjE2NzA2NjU3ODIsImV4cCI6MTY3MDY2NjY4Mn0.mbxAL3YN_hxsUFEoud62Ocku1_pYZi2F3LiCPzSgpLs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"initial_link\":\"https://www.twitch.tv/\",\r\n    \"short_link\":\"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/linkRed",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"linkRed"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delLink",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY3MDY2NTc4MiwianRpIjoiZmFkZTFhYjUtNDgwZS00ZDJhLWE4ODItMzAwNDUwNmEyOGI1IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im11cmUiLCJuYmYiOjE2NzA2NjU3ODIsImV4cCI6MTY3MDY2NjY4Mn0.mbxAL3YN_hxsUFEoud62Ocku1_pYZi2F3LiCPzSgpLs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"short_link\":\"ab1dd589b37\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/delete_link",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"delete_link"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "changeShortLink",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY3MDY2NTc4MiwianRpIjoiZmFkZTFhYjUtNDgwZS00ZDJhLWE4ODItMzAwNDUwNmEyOGI1IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im11cmUiLCJuYmYiOjE2NzA2NjU3ODIsImV4cCI6MTY3MDY2NjY4Mn0.mbxAL3YN_hxsUFEoud62Ocku1_pYZi2F3LiCPzSgpLs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"old_short_link\":\"ab1dd589b\",\r\n    \"new_short_link\":\"twi\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/change_short_link",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"change_short_link"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "changeAccessLink",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY3MDY2NjcyMywianRpIjoiZWQ0NDgzYjctYmI5OS00OWNkLTg0NjUtYWQyNzFhNWQ2Y2FiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im11cmUiLCJuYmYiOjE2NzA2NjY3MjMsImV4cCI6MTY3MDY2NzYyM30.q7BBFSpdrVXbt_X0_qOmeP3lrJ9N-lfRgl7n79-ug88",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"short_link\":\"twi\",\r\n    \"access\":\"private\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/change_access_link",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"change_access_link"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "returnLinkForRegUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY3MDY2NjcyMywianRpIjoiZWQ0NDgzYjctYmI5OS00OWNkLTg0NjUtYWQyNzFhNWQ2Y2FiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im11cmUiLCJuYmYiOjE2NzA2NjY3MjMsImV4cCI6MTY3MDY2NzYyM30.q7BBFSpdrVXbt_X0_qOmeP3lrJ9N-lfRgl7n79-ug88",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"short_link\":\"twi\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/return_link_for_reg_user",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"return_link_for_reg_user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "returnLinkForUnregUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"short_link\":\"41f92d97\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/return_link_for_unreg_user",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"return_link_for_unreg_user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getLinksAuthUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY3MDY2NjcyMywianRpIjoiZWQ0NDgzYjctYmI5OS00OWNkLTg0NjUtYWQyNzFhNWQ2Y2FiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im11cmUiLCJuYmYiOjE2NzA2NjY3MjMsImV4cCI6MTY3MDY2NzYyM30.q7BBFSpdrVXbt_X0_qOmeP3lrJ9N-lfRgl7n79-ug88",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/get_links_auth_user",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"get_links_auth_user"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
