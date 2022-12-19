@@ -90,7 +90,7 @@ def change_access_links (user_id, short_link, access) :
     cursor.execute(action, {'short_link': short_link, 'access': access, 'user_id': user_id})
     connect.commit()
 
-# Поиск сокращенной ссылки ????????
+# Поиск сокращенной ссылки
 def get_link (short_link) :
     result = cursor.execute("SELECT links.* FROM links WHERE short_link=:short_link", {'short_link': short_link}).fetchone()
     connect.commit()
